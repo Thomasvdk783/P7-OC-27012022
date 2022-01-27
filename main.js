@@ -14,7 +14,7 @@ async function dataRecipes() {
 
     const arrUstensiles = item.ustensils;
     // console.log(arrUstensiles);
-    const allUstensiles = ustensils.concat(arrUstensiles);
+    const allUstensiles = arrUstensiles.concat();
     console.log(allUstensiles);
 
     arrIngredients.forEach(function (ing) {
@@ -30,27 +30,26 @@ async function dataRecipes() {
       /// BTN Ingredients ///
       const btnAfficheIngredients = document.querySelector(".dropbtn1");
       const dropContentIngredients = document.querySelector(".dropdown-content");
-      const showIngredientList = `<ul class="ul-btn-ingredients"><li>${ingredient}</li></ul>`
+      const showIngredientList = `<li>${ingredient}</li>`
       dropContentIngredients.innerHTML += showIngredientList;
       
       btnAfficheIngredients.addEventListener("click", function () {
         dropContentIngredients.style.display = "block";
         dropDownIngredient.classList.toggle("dropdown-ingredients-width");
       });
+      
+    });
 
-
-
-      /// BTN Ustensiles ///
-      const btnAfficheUstensiles = document.querySelector(".dropbtn3");
-      const dropContent3 = document.querySelector(".dropdown-content-ustensiles");
-      const dropDownUstensiles = document.querySelector(".dropdown-ustensiles");
-      // const showIngredientList = `<ul class="ul-btn-ingredients"><li>${ingredient}</li></ul>`
-      // dropContentIngredients.innerHTML += showIngredientList;
-    
-      btnAfficheUstensiles.addEventListener("click", function () {
-        dropContent3.style.display = "block";
-        dropDownUstensiles.classList.toggle("dropdown-ingredients-width");
-      });
+    /// BTN Ustensiles ///
+    const btnAfficheUstensiles = document.querySelector(".dropbtn3");
+    const dropContent3 = document.querySelector(".dropdown-content-ustensiles");
+    const dropDownUstensiles = document.querySelector(".dropdown-ustensiles");
+    // const showIngredientList = `<ul class="ul-btn-ingredients"><li>${ingredient}</li></ul>`
+    // dropContentIngredients.innerHTML += showIngredientList;
+  
+    btnAfficheUstensiles.addEventListener("click", function () {
+      dropContent3.style.display = "block";
+      dropDownUstensiles.classList.toggle("dropdown-ingredients-width");
     });
 
     /// Appareils ///

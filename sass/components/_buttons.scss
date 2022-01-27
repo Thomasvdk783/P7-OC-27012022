@@ -49,10 +49,16 @@
     color: #fff;
     background-color: #3282F7;
     width: 550px;
-    height: auto;
+    height: 450px;
     border: 1px solid #3282F7;
     border-radius:5px;
     z-index: 1;
+    li{
+      display: grid;
+      grid-template-columns: 2fr;
+      list-style: none;
+      padding: 10px;
+    }
   }
   .dropdown-content a {
     color: #fff;
@@ -109,7 +115,8 @@
     display: none;
     position: absolute;
     background-color: #68D9A4;
-    min-width: 230px;
+    width: 550px;
+    height: 450px;
     border: 1px solid #68D9A4;
     border-radius:5px;
     z-index: 1;
@@ -149,7 +156,8 @@
     display: none;
     position: absolute;
     background-color: #ED6454;
-    min-width: 230px;
+    width: 550px;
+    height: 450px;
     border: 1px solid #ED6454;
     border-radius:5px;
     z-index: 1;
