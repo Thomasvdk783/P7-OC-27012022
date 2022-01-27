@@ -1,0 +1,38 @@
+///// search /////
+
+// input search
+
+.search-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .box-search {
+        width: 100%;
+        background-color: #E7E7E7;
+        border-radius: 5px;
+        padding: 15px 15px 15px 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            background: #E7E7E7;
+            font-size: 22px;
+            width: 585px;
+            border:none;
+            padding: 5px 0px 5px 5px;
+            font-family: 'Lato', sans-serif;
+            &:focus {
+                outline:none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1235px){
+    .search-section {
+        width: 90%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

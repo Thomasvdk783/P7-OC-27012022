@@ -1,0 +1,87 @@
+////// homepage style /////
+
+.box-recipes {
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 40px;
+    .card-recipe {
+        background-color: #E7E7E7;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 380px;
+        height: auto;
+        figure {
+            margin: 0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            height: 178px;
+            width:380px;
+            overflow: hidden;
+            img {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                height: 178px;
+                width:380px;
+                object-fit: cover;
+            }
+        }
+        .bottom-part-card-recipe {
+            padding: 18px;
+            height: 186px;
+            display: flex;
+            flex-direction: column;
+            .card-header {
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
+                h2 {
+                    margin: 0;
+                }
+                .p-time {
+                    margin: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 10px;
+                    align-items: center;
+                }
+            }
+            .ingredients-explication {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 12px;
+                ul {
+                    padding-left:0;
+                    list-style-type:none;
+                    display: flex;
+                    flex-direction: column;
+                }
+                p {
+                    width: 60%;
+                    margin-top:12px;
+                    margin-bottom:12px;
+                    white-space:nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .card-recipe {
+        background-color: #E7E7E7;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 355px;
+        height: 364px;
+    }  
+}

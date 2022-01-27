@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les petits plats</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="principal-header">
+      <img
+        class="logo"
+        src="./medias/logo.svg"
+        alt="Les petits plats logo"
+        title="Les petits plats"
+      />
+      <h1 class="title-header">Les petits plats</h1>
+    </header>
+    <main>
+      <!-- Input search bar -->
+      <section class="search-section">
+        <section class="box-search">
+          <input
+            type="text"
+            placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette"
+          />
+          <img src="./medias/loupe.svg" alt="Loup image" />
+        </section>
+      </section>
+      <!-- Section BTN filter -->
+      <section class="section-btn-filter">
+        <div class="dropdown-ingredients">
+          <button  class="dropbtn1">
+            <input
+              type="text"
+              placeholder="Ingredients"
+              id="myInputIngredients"
+              onkeyup="filterFunctionIngredients()"
+            />
+          </button>
+          <div id="myDropdownIngredients" class="dropdown-content">
+            <!-- Contenu dynamique -->
+          </div>
+        </div>
+
+        <div class="dropdown-appareil">
+          <button  class="dropbtn2 dropbtn-appareil">
+            <input
+              type="text"
+              placeholder="Appareil"
+              id="myInputAppareil"
+              onkeyup="filterFunctionAppareil()"
+            />
+          </button>
+          <div id="myDropdownAppareil" class="dropdown-content-appareil">
+            <!-- Contenu dynamique -->
+          </div>
+        </div>
+
+        <div class="dropdown-ustensiles">
+          <button  class="dropbtn3 dropbtn-ustensiles">
+            <input
+              type="text"
+              placeholder="Ustensiles"
+              id="myInputUstensiles"
+              onkeyup="filterFunctionUstensiles()"
+            />
+          </button>
+          <div id="myDropdownUstensiles" class="dropdown-content-ustensiles">
+            <!-- Contenu dynamique -->
+          </div>
+        </div>
+      </section>
+      <!-- Content section with recipes -->
+      <section id="list-recipes" class="box-recipes">
+        <!-- Recipes -->
+      </section>
+    </main>
+
+    <!-- script link -->
+    <script type="module" src="main.js" async></script>
+
+  </body>
+</html>
