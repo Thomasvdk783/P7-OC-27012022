@@ -11,61 +11,69 @@ async function dataRecipes() {
   recipes.forEach((item) => {
     const arrIngredients = item.ingredients;
     let showIngredients;
+    
 
-    const arrUstensiles = item.ustensils;
-    // console.log(arrUstensiles);
-    const allUstensiles = arrUstensiles.concat();
-    console.log(allUstensiles);
-
+    // Ingredients //
     arrIngredients.forEach(function (ing) {
       const ingredient = ing.ingredient;
       const arrIngredients = [ing.ingredient];
-      const allIngredientInArray = arrIngredients.concat();
-      // console.log(allIngredientInArray);
       const quantity = ing.quantity;
       const unit = ing.unit;
       showIngredients += `<li>${ingredient} : ${quantity} ${unit}</li>`;
 
-
       /// BTN Ingredients ///
       const btnAfficheIngredients = document.querySelector(".dropbtn1");
       const dropContentIngredients = document.querySelector(".dropdown-content");
-      const showIngredientList = `<li>${ingredient}</li>`
+      const showIngredientList = `<p>${ingredient}</p>`;
       dropContentIngredients.innerHTML += showIngredientList;
-      
-      btnAfficheIngredients.addEventListener("click", function () {
-        dropContentIngredients.style.display = "block";
-        dropDownIngredient.classList.toggle("dropdown-ingredients-width");
-      });
-      
-    });
+      const iconeIngredients = btnAfficheIngredients.lastElementChild;
 
-    /// BTN Ustensiles ///
-    const btnAfficheUstensiles = document.querySelector(".dropbtn3");
-    const dropContent3 = document.querySelector(".dropdown-content-ustensiles");
-    const dropDownUstensiles = document.querySelector(".dropdown-ustensiles");
-    // const showIngredientList = `<ul class="ul-btn-ingredients"><li>${ingredient}</li></ul>`
-    // dropContentIngredients.innerHTML += showIngredientList;
-  
-    btnAfficheUstensiles.addEventListener("click", function () {
-      dropContent3.style.display = "block";
-      dropDownUstensiles.classList.toggle("dropdown-ingredients-width");
+      btnAfficheIngredients.addEventListener("click", function () {
+        dropContentIngredients.style.display = "flex";
+        iconeIngredients.classList.add('fa-chevron-up');
+        
+        // dropDownIngredient.classList.toggle("dropdown-ingredients-width");
+      });
     });
+    
 
     /// Appareils ///
-
-
+    const appareils = item.appliance;
     /// BTN Appareil ///
     const btnAfficheAppareils = document.querySelector(".dropbtn2");
     const dropContent2 = document.querySelector(".dropdown-content-appareil");
-    const dropDownAppareils = document.querySelector(".dropdown-appareil");
-    // const showAppareilList = `<ul class="ul-btn-ingredients"><li>${appareils}</li></ul>`
-    // dropContentIngredients.innerHTML += showAppareilList;
-      
+    const showAppareilList = `<p>${appareils}</p>`
+    dropContent2.innerHTML += showAppareilList;
+    const iconeAppareils = btnAfficheAppareils.lastElementChild;
+
     btnAfficheAppareils.addEventListener("click", function () {
-      dropContent2.style.display = "block";
+      dropContent2.style.display = "flex";
+      iconeAppareils.classList.add('fa-chevron-up');
       dropDownAppareils.classList.toggle("dropdown-ingredients-width");
     });
+
+    /// Filtrage des doublons ///
+    const arrayAppareils = new Array(appareils);
+    // console.log(arrayAppareils);
+    const arrayAppareilsFilter = [...new Set(arrayAppareils)];
+    console.log(arrayAppareilsFilter);
+
+
+
+    /// Ustensiles ///
+    const ustensiles = item.ustensils;
+    const showUstensiles = `<p>${ustensiles}</p>`;
+    /// BTN Ustensiles ///
+    const btnAfficheUstensiles = document.querySelector(".dropbtn3");
+    const dropContent3 = document.querySelector(".dropdown-content-ustensiles");
+    dropContent3.innerHTML += showUstensiles;
+    const iconeUstensiles = btnAfficheUstensiles.lastElementChild;
+
+    btnAfficheUstensiles.addEventListener("click", function () {
+      dropContent3.style.display = "flex";
+      iconeUstensiles.classList.add('fa-chevron-up');
+    });
+    
 
     
 
@@ -83,7 +91,7 @@ async function dataRecipes() {
                   </p>
               </header>
               <article class="ingredients-explication">
-              <ul class="show-ingredient">${showIngredients}
+              <ul class="show-ingredient">${showIngredients}</ul>
                   <p>
                       ${item.description}
                   </p>
@@ -92,7 +100,6 @@ async function dataRecipes() {
           </section>`;
 
     containerRecipes.innerHTML += recipeCard;
-
   });
 }
 dataRecipes();

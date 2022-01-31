@@ -5,14 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Les petits plats</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    
+    <!-- Link Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Link Font awesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Link Style of project -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
+  
   <body>
     <!-- Header -->
     <header class="principal-header">
@@ -38,44 +45,48 @@
       <!-- Section BTN filter -->
       <section class="section-btn-filter">
         <div class="dropdown-ingredients">
-          <button  class="dropbtn1">
+          <button class="dropbtn1">
             <input
               type="text"
               placeholder="Ingredients"
               id="myInputIngredients"
               onkeyup="filterFunctionIngredients()"
-            />
+            /><i class="fas fa-chevron-down"></i>
           </button>
           <div id="myDropdownIngredients" class="dropdown-content">
-            <ul class="ul-btn-ingredients"><!-- Contenu dynamique --></ul>
+            <ul class="ul-btn-ingredients">
+              <!-- Contenu dynamique -->
+            </ul>
           </div>
         </div>
 
         <div class="dropdown-appareil">
-          <button  class="dropbtn2 dropbtn-appareil">
+          <button class="dropbtn2 dropbtn-appareil">
             <input
               type="text"
               placeholder="Appareil"
               id="myInputAppareil"
               onkeyup="filterFunctionAppareil()"
-            />
+            /><i class="fas fa-chevron-down"></i>
           </button>
           <div id="myDropdownAppareil" class="dropdown-content-appareil">
             <!-- Contenu dynamique -->
+            <!-- <ul class="ul-btn-Appareils"></ul> -->
           </div>
         </div>
 
         <div class="dropdown-ustensiles">
-          <button  class="dropbtn3 dropbtn-ustensiles">
+          <button class="dropbtn3 dropbtn-ustensiles">
             <input
               type="text"
               placeholder="Ustensiles"
               id="myInputUstensiles"
               onkeyup="filterFunctionUstensiles()"
-            />
+            /><i class="fas fa-chevron-down"></i>
           </button>
           <div id="myDropdownUstensiles" class="dropdown-content-ustensiles">
             <!-- Contenu dynamique -->
+            <ul class="ul-btn-Ustensiles" id="myDropdownUstensiles"></ul>
           </div>
         </div>
       </section>
@@ -87,6 +98,5 @@
 
     <!-- script link -->
     <script type="module" src="main.js" async></script>
-
   </body>
 </html>

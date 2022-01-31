@@ -65,20 +65,17 @@ main {
 }
 .section-btn-filter .dropdown-content {
   display: none;
+  flex-wrap: wrap;
+  gap: 25px;
   position: absolute;
   font-weight: bold;
   color: #fff;
   background-color: #3282F7;
-  width: 550px;
-  height: 450px;
+  width: 650px;
+  height: 550px;
   border: 1px solid #3282F7;
   border-radius: 5px;
   z-index: 1;
-}
-.section-btn-filter .dropdown-content li {
-  display: grid;
-  grid-template-columns: 2fr;
-  list-style: none;
   padding: 10px;
 }
 .section-btn-filter .dropdown-content a {
@@ -130,13 +127,18 @@ main {
 }
 .section-btn-filter .dropdown-content-appareil {
   display: none;
+  flex-wrap: wrap;
+  gap: 25px;
   position: absolute;
   background-color: #68D9A4;
-  width: 550px;
-  height: 450px;
+  width: 650px;
+  height: 550px;
+  color: white;
+  font-weight: bold;
   border: 1px solid #68D9A4;
   border-radius: 5px;
   z-index: 1;
+  padding: 10px;
 }
 .section-btn-filter .dropbtn-ustensiles {
   background-color: #ED6454;
@@ -169,13 +171,18 @@ main {
 }
 .section-btn-filter .dropdown-content-ustensiles {
   display: none;
+  flex-wrap: wrap;
+  gap: 25px;
   position: absolute;
   background-color: #ED6454;
-  width: 550px;
-  height: 450px;
+  width: 650px;
+  height: 550px;
+  color: #fff;
+  font-weight: bold;
   border: 1px solid #ED6454;
   border-radius: 5px;
   z-index: 1;
+  padding: 10px;
 }
 
 @media screen and (max-width: 375px) {
@@ -261,12 +268,12 @@ main {
   margin-top: 40px;
 }
 .box-recipes .card-recipe {
-  background-color: #E7E7E7;
+  background-color: #e7e7e7;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   width: 380px;
-  height: auto;
+  height: 400px;
 }
 .box-recipes .card-recipe figure {
   margin: 0;
@@ -311,6 +318,8 @@ main {
   flex-direction: row;
   justify-content: space-between;
   font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .box-recipes .card-recipe .bottom-part-card-recipe .ingredients-explication ul {
   padding-left: 0;
@@ -320,7 +329,7 @@ main {
   flex-direction: column;
 }
 .box-recipes .card-recipe .bottom-part-card-recipe .ingredients-explication p {
-  width: 60%;
+  width: 50%;
   margin-top: 12px;
   margin-bottom: 12px;
   white-space: nowrap;
@@ -330,7 +339,7 @@ main {
 
 @media screen and (min-width: 375px) {
   .card-recipe {
-    background-color: #E7E7E7;
+    background-color: #e7e7e7;
     border-radius: 5px;
     display: flex;
     flex-direction: column;

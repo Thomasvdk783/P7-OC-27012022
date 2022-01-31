@@ -21,12 +21,12 @@
             {
                 "ingredient" : "Sucre",
                 "quantity" : 30,
-                "unit" : "grammes"
+                "unit" : "gr"
             },
             {
                 "ingredient": "Glaçons",
                 "quantity": 5,
-                "unit":"unités"
+                "unit":""
             }
         ],
         "time": 10,
@@ -42,26 +42,27 @@
             {
                 "ingredient" : "Thon Rouge (ou blanc)",
                 "quantity" : 200,
-                "unit" : "grammes"
+                "unit" : "gr"
             },
             {
                 "ingredient" : "Concombre",
                 "quantity" : 1,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient" : "Tomate",
-                "quantity" : 2
+                "quantity" : 2,
+                "unit" : ""
             },
             {
                 "ingredient" : "Carotte",
                 "quantity" : 1,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient" : "Citron Vert",
                 "quantity" : 5,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient" : "Lait de Coco",
@@ -81,7 +82,7 @@
             {
                 "ingredient": "Poulet",
                 "quantity" : 1,
-                "unit" : "pièce"          
+                "unit" : ""          
             },
             {
                 "ingredient": "Lait de coco",
@@ -96,12 +97,12 @@
             {
                 "ingredient": "Oignon",
                 "quantity" : 1,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient": "Poivron rouge",
                 "quantity": 1,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient": "Huile d'olive",
@@ -121,26 +122,26 @@
             {
                 "ingredient": "Riz blanc",
                 "quantity": 500,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Thon en miettes",
                 "quantity": 200,
-                "unit": "grammes"
+                "unit": "gr"
             },{
                 "ingredient": "Tomate",
                 "quantity": 2,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient": "Oeuf dur",
                 "quantity": 2,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient": "Maïs",
                 "quantity": 300,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Vinaigrette",
@@ -161,17 +162,17 @@
            {
                "ingredient": "Pâte feuilletée",
                "quantity": 1,
-               "unit" : "pièce" 
+               "unit" : "" 
            },
            {
                "ingredient": "Thon en miettes",
                "quantity": 130,
-               "unit": "grammes"
+               "unit": "gr"
            },
            {
                 "ingredient": "Tomate",
                 "quantity": 2,
-                "unit" : "pièce"
+                "unit" : ""
            },
            {
                "ingredient": "Crème fraiche",
@@ -181,12 +182,12 @@
            {
                "ingredient": "gruyère râpé",
                "quantity": 100,
-               "unit": "grammes"
+               "unit": "gr"
            },
            {
                 "ingredient": "Moutarde de Dijon",
                 "quantity": 1,
-                "unite": "cuillères à soupe"
+                "unit": "cuillères à soupe"
            }
         ],
         "time": 45,
@@ -202,17 +203,17 @@
             {
                 "ingredient": "Pâte brisée",
                 "quantity": 1,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient": "Pomme",
                 "quantity": 3,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient": "Oeuf",
                 "quantity": "2",
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient":"Crème fraiche",
@@ -222,7 +223,7 @@
             {
                 "ingredient": "Sucre en Poudre",
                 "quantity": 100,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Sucre vanillé",
@@ -243,12 +244,12 @@
             {
                 "ingredient": "Pâte sablée",
                 "quantity": 1,
-                "unit" : "pièce"
+                "unit" : ""
             }, 
             {
                 "ingredient": "Chocolat au lait",
                 "quantity": 300,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Crème liquide",
@@ -258,12 +259,12 @@
             {
                 "ingredient": "Beurre",
                 "quantity": "30",
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Fraise",
                 "quantity": 6,
-                "unit" : "pièce"
+                "unit" : ""
             }
         ],
         "time": 50,
@@ -278,32 +279,32 @@
            {
                 "ingredient": "Noix",
                 "quantity": "180",
-                "unit": "grammes"
+                "unit": "gr"
            },
            {
                "ingredient": "Chocolat noir",
                "quantity": 150,
-               "unit": "grammes"
+               "unit": "gr"
            },
            {
                "ingredient": "Beurre",
                "quantity": 120,
-               "unit": "grammes"
+               "unit": "gr"
            },
            {
                 "ingredient": "Oeuf",
                 "quantity": 2,
-                "unit" : "pièce"
+                "unit" : ""
            },
            {
                "ingredient": "Sucre en Poudre",
                "quantity": "110",
-               "unit": "grammes"
+               "unit": "gr"
            },
            {
                 "ingredient": "farine",
                 "quantity": 90,
-                "unit": "grammes"
+                "unit": "gr"
            }
 
         ], 
@@ -320,17 +321,17 @@
             {
                 "ingredient": "Concombre",
                 "quantity": 1,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient": "Olives",
                 "quantity": 3,
-                "unit" : "pièce"
+                "unit" : ""
             },
             {
                 "ingredient": "Fromage de chèvre",
                 "quantity": 150,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Vinaigre Balsamic",
@@ -361,7 +362,7 @@
             {
                 "ingredient": "Roblochon",
                 "quantity": "1",
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Pommes de terre",
@@ -376,7 +377,7 @@
             {
                 "ingredient": "Oignon",
                 "quantity": 300,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Vin blanc sec",
@@ -396,12 +397,12 @@
             {
                 "ingredient": "Tomates cerises",
                 "quantity": 250,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Mozzarella",
                 "quantity": 150,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Jambon de parme",
@@ -411,12 +412,12 @@
             {
                 "ingredient": "Pommes",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Salade Verte",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Vinaigrette",
@@ -436,12 +437,12 @@
             {
                 "ingredient": "Rhubarbe",
                 "quantity": 160,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Pommes",
                 "quantity": 8,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Sucre vanillé",
@@ -467,17 +468,17 @@
             {
                 "ingredient": "Mâche",
                 "quantity": 60,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Pommes de terre",
                 "quantity": 200,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Échalote",
                 "quantity": 2,
-                "unit": "pièce"
+                "unit": ""
 
             },
             {
@@ -504,38 +505,38 @@
             {
                 "ingredient": "Saucisse bretonne ou de toulouse",
                 "quantity": 2,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Farine de blé noir",
                 "quantity": 130,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Oeuf",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
 
             },
             {
                 "ingredient": "Fromage à raclette",
                 "quantity": 300,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Oignon",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Beurre",
                 "quantity": 75,
-                "unit": "grammes"
+                "unit": "gr"
             }
 
         ],
         "time": 100,
-        "description":"Mélanger la farine et les oeufs, faire fondre 25 grammes de beurre et ajouter à la pâte. Ajouter du sel. Laisser reposer 1 heure. Faire les galettes et laisser refroidire. Faire chauffer les saucisses avec du beurre et l'oignon. Enrouler les saucisses dans les crêpes avec une partie du fromage. Mettre le reste du fromage à raclette par dessus les crêpes. Passer four pendant 20 minutes",
+        "description":"Mélanger la farine et les oeufs, faire fondre 25 gr de beurre et ajouter à la pâte. Ajouter du sel. Laisser reposer 1 heure. Faire les galettes et laisser refroidire. Faire chauffer les saucisses avec du beurre et l'oignon. Enrouler les saucisses dans les crêpes avec une partie du fromage. Mettre le reste du fromage à raclette par dessus les crêpes. Passer four pendant 20 minutes",
         "appliance": "Four",
         "ustensils":["poelle à frire","couteau"]
     },
@@ -547,12 +548,12 @@
             {
                 "ingredient": "Oeuf",
                 "quantity": 3,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Farine",
                 "quantity": 250,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Lait",
@@ -562,17 +563,17 @@
             {
                 "ingredient": "Beurre salé",
                 "quantity": 30,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Chocolat au lait",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Banane",
                 "quantity": 4,
-                "unit": "pièce"
+                "unit": ""
             }
         ],
         "time": 60,
@@ -588,17 +589,17 @@
             {
                 "ingredient": "Tomate",
                 "quantity": 500,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Mozzarella",
                 "quantity": 250,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Pennes",
                 "quantity": 500,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Basilic",
@@ -624,12 +625,12 @@
             {
                 "ingredient": "Fraise",
                 "quantity": 500,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Pastèque",
                 "quantity": 0.5,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Jus de citron",
@@ -639,7 +640,7 @@
             {
                 "ingredient": "Glaçons",
                 "quantity": 8,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Menthe",
@@ -660,7 +661,7 @@
             {
                 "ingredient": "Ananas",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Glace à la vanille",
@@ -686,12 +687,12 @@
             {
                 "ingredient": "Kiwi",
                 "quantity": 4,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Citron",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Lait",
@@ -701,12 +702,12 @@
             {
                 "ingredient": "Sucre glace",
                 "quantity": 30,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Banane",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             }
         ],
         "time": 0,
@@ -722,22 +723,22 @@
             {
                 "ingredient": "Tagliatelles",
                 "quantity": 500,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Lardons",
                 "quantity": 150,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Crème fraiche",
                 "quantity": 200,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Parmesan",
                 "quantity": 100,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "huile d'olive",
@@ -758,22 +759,22 @@
             {
                 "ingredient": "Spaghettis",
                 "quantity": 400,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Oignon",
                 "quantity": 2,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Coulis de tomate",
                 "quantity": 300,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Viande hachée 1% de matière grasse",
                 "quantity": 400,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Vin rouge",
@@ -799,27 +800,27 @@
             {
                 "ingredient": "Beurre",
                 "quantity": 160,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Chocolat noir",
                 "quantity": 200,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Farine",
                 "quantity": 50,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Oeuf",
                 "quantity": 4,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Sucre",
                 "quantity": 150,
-                "unit": "grammes"
+                "unit": "gr"
             }
         ],
         "time": 30,
@@ -835,22 +836,22 @@
             {
                 "ingredient": "Pâte brisée",
                 "quantity": 200,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Lardons",
                 "quantity": 200,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Beurre",
                 "quantity": 30,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Oeuf",
                 "quantity": 3,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Crème Fraîche",
@@ -876,27 +877,27 @@
             {
                 "ingredient": "Thon en miettes",
                 "quantity": 160,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Maïs",
                 "quantity": 60,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Tomate",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Concombre",
                 "quantity": 0.5,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Macaronis",
                 "quantity": 300,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Mayonnaise",
@@ -917,27 +918,27 @@
             {
                 "ingredient": "Sucre",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Beurre",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Farine",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Chocolat noir en pepites",
                 "quantity": 100,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Oeuf",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             }
         ],
         "time": 30,
@@ -953,12 +954,12 @@
             {
                 "ingredient": "Tomate",
                 "quantity": 6,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Pommes de terre",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Huile d'olives",
@@ -968,7 +969,7 @@
             {
                 "ingredient": "Oignon",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Ail",
@@ -989,12 +990,12 @@
             {
                 "ingredient": "Oseille",
                 "quantity": 2,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Oeuf",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Crème fraîche",
@@ -1009,7 +1010,7 @@
             {
                 "ingredient": "Beurre salé",
                 "quantity": 50,
-                "unit": "grammes"
+                "unit": "gr"
             }
         ],
         "time": 15,
@@ -1025,22 +1026,22 @@
             {
                 "ingredient": "Poireau",
                 "quantity": 3,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Pommes de terre",
                 "quantity": 400,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Oseille",
                 "quantity": 75,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Beurre",
                 "quantity": 50,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Crême fraîche",
@@ -1049,7 +1050,7 @@
             }
         ],
         "time": 80,
-        "description":"Emincer les blanc de poireaux et les faire chauffer dans 25 grammes de beurre. AJouter les pommes de terres coupées en morceaux. Ajouter l'eau et laisser mijoter pour 45 minutes. Chauffer l'oseille avec le beurre restant puis incorporer le tout. Mixez. Ajoutez la crème. Bon appetit.",
+        "description":"Emincer les blanc de poireaux et les faire chauffer dans 25 gr de beurre. AJouter les pommes de terres coupées en morceaux. Ajouter l'eau et laisser mijoter pour 45 minutes. Chauffer l'oseille avec le beurre restant puis incorporer le tout. Mixez. Ajoutez la crème. Bon appetit.",
         "appliance": "Mixer",
         "ustensils":["casserolle","couteau"]
     },
@@ -1071,7 +1072,7 @@
             {
                 "ingredient": "Citron",
                 "quantity": 2,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Huile d'olive",
@@ -1097,12 +1098,12 @@
             {
                 "ingredient": "Pois Cassé",
                 "quantity": 500,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Oignon",
                 "quantity": 1,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Ail",
@@ -1123,27 +1124,27 @@
             {
                 "ingredient": "Carotte",
                 "quantity": 2,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Pommes de terre",
                 "quantity": 2,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Haricots verts",
                 "quantity": 150,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Petits poids",
                 "quantity": 100,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Lardons",
                 "quantity": 150,
-                "unit": "grammes"
+                "unit": "gr"
             }
         ],
         "time": 60,
@@ -1174,7 +1175,7 @@
             {
                 "ingredient": "Gruyère",
                 "quantity": 100,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Lait",
@@ -1210,7 +1211,7 @@
             {
                 "ingredient": "Feuilles de laitue",
                 "quantity": 4,
-                "unit": "pièce"
+                "unit": ""
             },
             {
                 "ingredient": "Fromage blanc",
@@ -1236,7 +1237,7 @@
             {
                 "ingredient": "Patate douce",
                 "quantity": 800,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Crème fraîche",
@@ -1251,7 +1252,7 @@
             {
                 "ingredient": "Orange",
                 "quantity": 1,
-                "unit":"pièce"
+                "unit":""
             }
         ],
         "time": 25,
@@ -1267,17 +1268,17 @@
             {
                 "ingredient": "Carotte",
                 "quantity": 6,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Pommes de terre",
                 "quantity": 1,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Beurre",
                 "quantity": 20,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Crème fraîche",
@@ -1308,12 +1309,12 @@
             {
                 "ingredient": "Courgette",
                 "quantity": 2,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Fromage de chèvre",
                 "quantity": 4,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Lait",
@@ -1328,7 +1329,7 @@
             {
                 "ingredient": "Gruyère",
                 "quantity": 40,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Maïzena",
@@ -1349,12 +1350,12 @@
             {
                 "ingredient": "Courgette",
                 "quantity": 2,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Viande hachée",
                 "quantity": 600,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Huile d'olives",
@@ -1364,7 +1365,7 @@
             {
                 "ingredient": "Oignon",
                 "quantity": 1,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Coulis de tomates",
@@ -1374,7 +1375,7 @@
             {
                 "ingredient": "Gruyère",
                 "quantity": 50,
-                "unit": "grammes"
+                "unit": "gr"
             }
             
         ],
@@ -1401,12 +1402,12 @@
             {
                 "ingredient": "Oeuf",
                 "quantity": 3,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Sucre roux",
                 "quantity": 75,
-                "unit": "grammes"
+                "unit": "gr"
             }
         ],
         "time": 20,
@@ -1422,22 +1423,22 @@
             {
                 "ingredient": "Pomme",
                 "quantity": 2,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Farine",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Beurre",
                 "quantity": 50,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Sucre roux",
                 "quantity": 80,
-                "unit":"grammes"
+                "unit":"gr"
             }
         ],
         "time": 40,
@@ -1458,7 +1459,7 @@
             {
                 "ingredient": "Citron Vert",
                 "quantity": 3,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Sucre en poudre",
@@ -1484,12 +1485,12 @@
             {
                 "ingredient": "Oeuf",
                 "quantity": 3,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Chocolat noir",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Sucre vanillé",
@@ -1510,12 +1511,12 @@
             {
                 "ingredient": "Chocolat",
                 "quantity": 200,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Oeuf",
                 "quantity": 3,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Poires au jus",
@@ -1525,7 +1526,7 @@
             {
                 "ingredient": "Boudoirs",
                 "quantity": 15,
-                "unit":"pièce"
+                "unit":""
             }
         ],
         "time": 60,
@@ -1541,27 +1542,27 @@
             {
                 "ingredient": "Pâte brisée",
                 "quantity": 200,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Sucre",
                 "quantity": 150,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Beurre fondu",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Oeuf",
                 "quantity": 3,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Citron",
                 "quantity": 1,
-                "unit":"pièce"
+                "unit":""
             }
         ],
         "time": 50,
@@ -1582,22 +1583,22 @@
             {
                 "ingredient": "Chocolat",
                 "quantity": 200,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Sucre",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Beurre",
                 "quantity": 50,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "farine",
                 "quantity": 40,
-                "unit": "grammes"
+                "unit": "gr"
             }
         ],
         "time": 15,
@@ -1618,17 +1619,17 @@
             {
                 "ingredient": "Oeuf",
                 "quantity": 2,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Farine",
                 "quantity": 30,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Sucre",
                 "quantity": 80,
-                "unit":"grammes"
+                "unit":"gr"
             }
         ],
         "time": 30,
@@ -1644,12 +1645,12 @@
             {
                 "ingredient": "Farine",
                 "quantity": 250,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Sucre",
                 "quantity": 150,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Sucre vanillé",
@@ -1659,7 +1660,7 @@
             {
                 "ingredient": "Oeuf",
                 "quantity": 4,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Lait",
@@ -1669,7 +1670,7 @@
             {
                 "ingredient": "Pruneaux",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             }
         ],
         "time": 60,
@@ -1685,17 +1686,17 @@
             {
                 "ingredient": "Jus de citron",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Mascarpone",
                 "quantity": 250,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Sucre",
                 "quantity": 100,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Crème Fraîche",
@@ -1716,7 +1717,7 @@
             {
                 "ingredient": "Pâte à pizza",
                 "quantity": 1,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Tomates pelées",
@@ -1736,7 +1737,7 @@
             {
                 "ingredient": "Gruyère",
                 "quantity": 200,
-                "unit": "grammes"
+                "unit": "gr"
             }
         ],
         "time": 40,
@@ -1752,17 +1753,17 @@
             {
                 "ingredient": "Bananes",
                 "quantity": 2,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Kiwis",
                 "quantity": 3,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Mangue",
                 "quantity": 1,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Ananas",
@@ -1788,27 +1789,27 @@
             {
                 "ingredient": "Pâte feuilletée",
                 "quantity": 400,
-                "unit":"grammes"
+                "unit":"gr"
             },
             {
                 "ingredient": "Oeuf",
                 "quantity": 6,
-                "unit":"pièce"
+                "unit":""
             },
             {
                 "ingredient": "Poudre d'amendes",
                 "quantity": 500,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Beurre",
                 "quantity": 500,
-                "unit": "grammes"
+                "unit": "gr"
             },
             {
                 "ingredient": "Sucre glace",
                 "quantity": 500,
-                "unit":"grammes"
+                "unit":"gr"
             }
         ],
         "time": 60,
