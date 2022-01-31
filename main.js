@@ -6,6 +6,10 @@ async function dataRecipes() {
   const responseJSON = await fetch("../../Data/ApiRecipes.json");
   const responseJS = await responseJSON.json();
   const recipes = responseJS.recipes;
+  let ingredients = [];
+  let arrUstensiles = [];
+  let arrAppareils = [];
+  
 
   // Show Recipes
   recipes.forEach((item) => {
@@ -15,6 +19,8 @@ async function dataRecipes() {
 
     // Ingredients //
     arrIngredients.forEach(function (ing) {
+      ingredients.push(ing.ingredient);
+      arrAppareils.push(item.appliance);
       const ingredient = ing.ingredient;
       const arrIngredients = [ing.ingredient];
       const quantity = ing.quantity;
@@ -37,31 +43,18 @@ async function dataRecipes() {
     });
     
 
-    /// Appareils ///
-    const appareils = item.appliance;
-    /// BTN Appareil ///
-    const btnAfficheAppareils = document.querySelector(".dropbtn2");
-    const dropContent2 = document.querySelector(".dropdown-content-appareil");
-    const showAppareilList = `<p>${appareils}</p>`
-    dropContent2.innerHTML += showAppareilList;
-    const iconeAppareils = btnAfficheAppareils.lastElementChild;
+    
 
-    btnAfficheAppareils.addEventListener("click", function () {
-      dropContent2.style.display = "flex";
-      iconeAppareils.classList.add('fa-chevron-up');
-      dropDownAppareils.classList.toggle("dropdown-ingredients-width");
-    });
-
-    /// Filtrage des doublons ///
-    const arrayAppareils = new Array(appareils);
-    // console.log(arrayAppareils);
-    const arrayAppareilsFilter = [...new Set(arrayAppareils)];
-    console.log(arrayAppareilsFilter);
+    // /// Filtrage des doublons ///
+    // const arrayAppareils = new Array(appareils);
+    // // console.log(arrayAppareils);
+    // const arrayAppareilsFilter = [...new Set(arrayAppareils)];
 
 
 
     /// Ustensiles ///
     const ustensiles = item.ustensils;
+    
     const showUstensiles = `<p>${ustensiles}</p>`;
     /// BTN Ustensiles ///
     const btnAfficheUstensiles = document.querySelector(".dropbtn3");
@@ -101,5 +94,20 @@ async function dataRecipes() {
 
     containerRecipes.innerHTML += recipeCard;
   });
+  
+  /// BTN Appareil ///
+  const btnAfficheAppareils = document.querySelector(".dropbtn2");
+  const dropContent2 = document.querySelector(".dropdown-content-appareil");
+  // const showAppareilList = `<p>${appareils}</p>`
+  // dropContent2.innerHTML += showAppareilList;
+  const iconeAppareils = btnAfficheAppareils.lastElementChild;
+
+  btnAfficheAppareils.addEventListener("click", function () {
+    dropContent2.style.display = "flex";
+    iconeAppareils.classList.add('fa-chevron-up');
+    dropDownAppareils.classList.toggle("dropdown-ingredients-width");
+  });
+  // console.log(ingredients);
+  // console.log(new Set(ingredients));
 }
 dataRecipes();
