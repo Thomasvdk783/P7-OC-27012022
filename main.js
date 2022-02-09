@@ -9,67 +9,60 @@ async function dataRecipes() {
   let ingredients = [];
   let arrUstensiles = [];
   let arrAppareils = [];
-  
+
+  // Search Bar //
+  let searchBarRecipes = function () {
+    let input = document.getElementById("searchbar").value;
+    input = input.toLowerCase();
+    let cardRecipes = document.getElementsByClassName("card-recipe");
+
+    for (let i = 0; i < cardRecipes.length; i++) {
+      if (!cardRecipes[i].innerHTML.toLowerCase().includes(input)) {
+        cardRecipes[i].style.display = "none";
+      } else {
+        cardRecipes[i].style.display = "list-item";
+      }
+    }
+    return x;
+  };
+  searchBarRecipes();
 
   // Show Recipes
   recipes.forEach((item) => {
     const arrIngredients = item.ingredients;
     let showIngredients;
-    
 
     // Ingredients //
     arrIngredients.forEach(function (ing) {
       ingredients.push(ing.ingredient);
       arrAppareils.push(item.appliance);
+      arrUstensiles.push(item.ustensils);
       const ingredient = ing.ingredient;
       const arrIngredients = [ing.ingredient];
       const quantity = ing.quantity;
       const unit = ing.unit;
       showIngredients += `<li>${ingredient} : ${quantity} ${unit}</li>`;
-
-      /// BTN Ingredients ///
-      const btnAfficheIngredients = document.querySelector(".dropbtn1");
-      const dropContentIngredients = document.querySelector(".dropdown-content");
-      const showIngredientList = `<p>${ingredient}</p>`;
-      dropContentIngredients.innerHTML += showIngredientList;
-      const iconeIngredients = btnAfficheIngredients.lastElementChild;
-
-      btnAfficheIngredients.addEventListener("click", function () {
-        dropContentIngredients.style.display = "flex";
-        iconeIngredients.classList.add('fa-chevron-up');
-        
-        // dropDownIngredient.classList.toggle("dropdown-ingredients-width");
-      });
     });
-    
-
-    
-
-    // /// Filtrage des doublons ///
-    // const arrayAppareils = new Array(appareils);
-    // // console.log(arrayAppareils);
-    // const arrayAppareilsFilter = [...new Set(arrayAppareils)];
-
-
 
     /// Ustensiles ///
-    const ustensiles = item.ustensils;
-    
+    const ustensiles = recipes.ustensils;
     const showUstensiles = `<p>${ustensiles}</p>`;
     /// BTN Ustensiles ///
     const btnAfficheUstensiles = document.querySelector(".dropbtn3");
     const dropContent3 = document.querySelector(".dropdown-content-ustensiles");
+    const dropContentIngredients = document.querySelector(".dropdown-content");
+    const dropContent2 = document.querySelector(".dropdown-content-appareil");
     dropContent3.innerHTML += showUstensiles;
     const iconeUstensiles = btnAfficheUstensiles.lastElementChild;
 
     btnAfficheUstensiles.addEventListener("click", function () {
       dropContent3.style.display = "flex";
-      iconeUstensiles.classList.add('fa-chevron-up');
+      dropContent2.style.display = "none";
+      dropContentIngredients.style.display = "none";
+      iconeUstensiles.classList.add("fa-chevron-up");
     });
-    
 
-    
-
+    // Show all recipes card in Doc Html //
     const containerRecipes = document.getElementById("list-recipes");
     const recipeCard = `<section class="card-recipe">
             <figure>
@@ -94,8 +87,11 @@ async function dataRecipes() {
 
     containerRecipes.innerHTML += recipeCard;
   });
-  
+
   /// BTN Appareil ///
+  // console.log(arrUstensiles);
+  // console.log(arrAppareils);
+
   const btnAfficheAppareils = document.querySelector(".dropbtn2");
   const dropContent2 = document.querySelector(".dropdown-content-appareil");
   // const showAppareilList = `<p>${appareils}</p>`
@@ -104,10 +100,29 @@ async function dataRecipes() {
 
   btnAfficheAppareils.addEventListener("click", function () {
     dropContent2.style.display = "flex";
-    iconeAppareils.classList.add('fa-chevron-up');
+    dropContent3.style.display = "none";
+    dropContentIngredients.style.display = "none";
+    iconeAppareils.classList.add("fa-chevron-up");
     dropDownAppareils.classList.toggle("dropdown-ingredients-width");
   });
-  // console.log(ingredients);
+
+  /// BTN Ingredients ///
+  const newArrayIngredients = new Set(ingredients);
+  // console.log(newArrayIngredients);
   // console.log(new Set(ingredients));
+  const btnAfficheIngredients = document.querySelector(".dropbtn1");
+
+  btnAfficheIngredients.addEventListener("click", function () {
+    dropContentIngredients.style.display = "flex";
+    dropContent2.style.display = "none";
+    dropContent3.style.display = "none";
+    iconeIngredients.classList.add("fa-chevron-up");
+    // dropDownIngredient.classList.toggle("dropdown-ingredients-width");
+  });
+
+  // const showIngredientList = `<p>${ingredient}</p>`;
+  // dropContentIngredients.innerHTML += showIngredientList;
+  // const iconeIngredients = btnAfficheIngredients.lastElementChild;
 }
 dataRecipes();
+/// Search bar ///
