@@ -11,20 +11,20 @@ async function dataRecipes() {
   let arrAppareils = [];
 
   // Search Bar //
-  let searchBarRecipes = function () {
+  function searchBarRecipes() {
     let input = document.getElementById("searchbar").value;
     input = input.toLowerCase();
-    let cardRecipes = document.getElementsByClassName("card-recipe");
+    let cardsRecipes = document.getElementsByClassName("card-recipe");
 
-    for (let i = 0; i < cardRecipes.length; i++) {
-      if (!cardRecipes[i].innerHTML.toLowerCase().includes(input)) {
-        cardRecipes[i].style.display = "none";
+    for (let i = 0; i < cardsRecipes.length; i++) {
+      if (!cardsRecipes[i].innerHTML.toLowerCase().includes(input)) {
+        cardsRecipes[i].style.display = "none";
       } else {
-        cardRecipes[i].style.display = "list-item";
+        cardsRecipes[i].style.display = "list-item";
       }
     }
-    return x;
-  };
+    return cardsRecipes;
+  }
   searchBarRecipes();
 
   // Show Recipes
@@ -125,4 +125,5 @@ async function dataRecipes() {
   // const iconeIngredients = btnAfficheIngredients.lastElementChild;
 }
 dataRecipes();
+searchBarRecipes();
 /// Search bar ///
