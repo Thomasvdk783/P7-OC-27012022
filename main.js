@@ -14,7 +14,7 @@ async function dataRecipes() {
   function searchBarRecipes() {
     let input = document.getElementById("searchbar").value;
     input = input.toLowerCase();
-    let cardsRecipes = document.getElementsByClassName("card-recipe");
+    let cardsRecipes = document.querySelectorAll(".card-recipe");
 
     for (let i = 0; i < cardsRecipes.length; i++) {
       if (!cardsRecipes[i].innerHTML.toLowerCase().includes(input)) {
@@ -125,5 +125,4 @@ async function dataRecipes() {
   // const iconeIngredients = btnAfficheIngredients.lastElementChild;
 }
 dataRecipes();
-searchBarRecipes();
 /// Search bar ///

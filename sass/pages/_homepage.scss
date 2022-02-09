@@ -78,6 +78,10 @@
   }
 }
 
+.card-recipe{
+  display: list-item;    
+ } 
+
 @media screen and (min-width: 375px) {
   .card-recipe {
     background-color: #e7e7e7;
