@@ -7,25 +7,11 @@ async function dataRecipes() {
   const responseJS = await responseJSON.json();
   const recipes = responseJS.recipes;
   let ingredients = [];
+  console.log(ingredients)
   let arrUstensiles = [];
   let arrAppareils = [];
 
-  // Search Bar //
-  function searchBarRecipes() {
-    let input = document.getElementById("searchbar").value;
-    input = input.toLowerCase();
-    let cardsRecipes = document.querySelectorAll(".card-recipe");
-
-    for (let i = 0; i < cardsRecipes.length; i++) {
-      if (!cardsRecipes[i].innerHTML.toLowerCase().includes(input)) {
-        cardsRecipes[i].style.display = "none";
-      } else {
-        cardsRecipes[i].style.display = "list-item";
-      }
-    }
-    return cardsRecipes;
-  }
-  searchBarRecipes();
+  
 
   // Show Recipes
   recipes.forEach((item) => {
@@ -36,30 +22,13 @@ async function dataRecipes() {
     arrIngredients.forEach(function (ing) {
       ingredients.push(ing.ingredient);
       arrAppareils.push(item.appliance);
+      arrAppareils.join(', ');
+      // console.log(arrAppareils)
       arrUstensiles.push(item.ustensils);
       const ingredient = ing.ingredient;
-      const arrIngredients = [ing.ingredient];
       const quantity = ing.quantity;
       const unit = ing.unit;
       showIngredients += `<li>${ingredient} : ${quantity} ${unit}</li>`;
-    });
-
-    /// Ustensiles ///
-    const ustensiles = recipes.ustensils;
-    const showUstensiles = `<p>${ustensiles}</p>`;
-    /// BTN Ustensiles ///
-    const btnAfficheUstensiles = document.querySelector(".dropbtn3");
-    const dropContent3 = document.querySelector(".dropdown-content-ustensiles");
-    const dropContentIngredients = document.querySelector(".dropdown-content");
-    const dropContent2 = document.querySelector(".dropdown-content-appareil");
-    dropContent3.innerHTML += showUstensiles;
-    const iconeUstensiles = btnAfficheUstensiles.lastElementChild;
-
-    btnAfficheUstensiles.addEventListener("click", function () {
-      dropContent3.style.display = "flex";
-      dropContent2.style.display = "none";
-      dropContentIngredients.style.display = "none";
-      iconeUstensiles.classList.add("fa-chevron-up");
     });
 
     // Show all recipes card in Doc Html //
@@ -87,42 +56,24 @@ async function dataRecipes() {
 
     containerRecipes.innerHTML += recipeCard;
   });
-
-  /// BTN Appareil ///
-  // console.log(arrUstensiles);
-  // console.log(arrAppareils);
-
-  const btnAfficheAppareils = document.querySelector(".dropbtn2");
-  const dropContent2 = document.querySelector(".dropdown-content-appareil");
-  // const showAppareilList = `<p>${appareils}</p>`
-  // dropContent2.innerHTML += showAppareilList;
-  const iconeAppareils = btnAfficheAppareils.lastElementChild;
-
-  btnAfficheAppareils.addEventListener("click", function () {
-    dropContent2.style.display = "flex";
-    dropContent3.style.display = "none";
-    dropContentIngredients.style.display = "none";
-    iconeAppareils.classList.add("fa-chevron-up");
-    dropDownAppareils.classList.toggle("dropdown-ingredients-width");
-  });
-
-  /// BTN Ingredients ///
-  const newArrayIngredients = new Set(ingredients);
-  // console.log(newArrayIngredients);
-  // console.log(new Set(ingredients));
-  const btnAfficheIngredients = document.querySelector(".dropbtn1");
-
-  btnAfficheIngredients.addEventListener("click", function () {
-    dropContentIngredients.style.display = "flex";
-    dropContent2.style.display = "none";
-    dropContent3.style.display = "none";
-    iconeIngredients.classList.add("fa-chevron-up");
-    // dropDownIngredient.classList.toggle("dropdown-ingredients-width");
-  });
-
-  // const showIngredientList = `<p>${ingredient}</p>`;
-  // dropContentIngredients.innerHTML += showIngredientList;
-  // const iconeIngredients = btnAfficheIngredients.lastElementChild;
 }
 dataRecipes();
 /// Search bar ///
+// Search Bar //
+
+function searchBarRecipes() {
+  let input = document.getElementById("searchbar").value;
+  input = input.toLowerCase();
+  let cardsRecipes = document.querySelectorAll(".card-recipe");
+
+  for (let i = 0; i < cardsRecipes.length; i++) {
+    if (!cardsRecipes[i].innerHTML.toLowerCase().includes(input)) {
+      cardsRecipes[i].style.display = "none";
+    } else {
+      cardsRecipes[i].style.display = "list-item";
+    }
+  }
+  return cardsRecipes;
+}
+const searchBar = document.getElementById("searchbar");
+searchBar.addEventListener("keyup", searchBarRecipes);

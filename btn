@@ -1,0 +1,42 @@
+    /// BTN Ingredients ///
+    let newArrayIgredients = Array.from(new Set(ingredients));
+    const dropContentIngredients = document.querySelector(".dropdown-content");
+    const dropContent2 = document.querySelector(".dropdown-content-appareil");
+    const dropContent3 = document.querySelector(".dropdown-content-ustensiles");
+    const showDropBtnIngredients = `<p>${newArrayIgredients}</p>`;
+    dropContentIngredients.innerHTML += showDropBtnIngredients;
+    const btnAfficheIngredients = document.querySelector(".dropbtn1");
+
+    btnAfficheIngredients.addEventListener("click", function () {
+      dropContentIngredients.style.display = "flex";
+      dropContent2.style.display = "none";
+      dropContent3.style.display = "none";
+      // dropDownIngredient.classList.toggle("dropdown-ingredients-width");
+    });
+
+    /// Ustensiles ///
+    const ustensiles = recipes.ustensils;
+    const showUstensiles = `<p>${ustensiles}</p>`;
+    /// BTN Ustensiles ///
+    const btnAfficheUstensiles = document.querySelector(".dropbtn3");
+    dropContent3.innerHTML += showUstensiles;
+
+    btnAfficheUstensiles.addEventListener("click", function () {
+      dropContent3.style.display = "flex";
+      dropContent2.style.display = "none";
+      dropContentIngredients.style.display = "none";
+    });
+
+    /// BTN Appareil ///
+    // console.log(arrUstensiles);
+    // console.log(arrAppareils);
+    const appareils = item.appliance
+    const btnAfficheAppareils = document.querySelector(".dropbtn2");
+    const showAppareilList = `<p class="p-appareils-btn">${appareils}</p>`;
+    dropContent2.innerHTML += showAppareilList;
+
+    btnAfficheAppareils.addEventListener("click", function () {
+      dropContent2.style.display = "flex";
+      dropContent3.style.display = "none";
+      dropContentIngredients.style.display = "none";
+    });

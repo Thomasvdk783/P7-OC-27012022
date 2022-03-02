@@ -36,7 +36,6 @@
       <section class="search-section">
         <section class="box-search">
           <input
-            onkeyup="searchBarRecipes()"
             type="text"
             id="searchbar"
             name="search"
@@ -48,12 +47,11 @@
       <!-- Section BTN filter -->
       <section class="section-btn-filter">
         <div class="dropdown-ingredients">
-          <button class="dropbtn1">
+          <button id="dropbtn1" class="dropbtn1">
             <input
               type="text"
               placeholder="Ingredients"
               id="myInputIngredients"
-              onkeyup="filterFunctionIngredients()"
             /><i class="fas fa-chevron-down"></i>
           </button>
           <div id="myDropdownIngredients" class="dropdown-content">
@@ -69,7 +67,6 @@
               type="text"
               placeholder="Appareil"
               id="myInputAppareil"
-              onkeyup="filterFunctionAppareil()"
             /><i class="fas fa-chevron-down"></i>
           </button>
           <div id="myDropdownAppareil" class="dropdown-content-appareil">
@@ -84,7 +81,6 @@
               type="text"
               placeholder="Ustensiles"
               id="myInputUstensiles"
-              onkeyup="filterFunctionUstensiles()"
             /><i class="fas fa-chevron-down"></i>
           </button>
           <div id="myDropdownUstensiles" class="dropdown-content-ustensiles">
@@ -100,6 +96,6 @@
     </main>
 
     <!-- script link -->
-    <script type="module" src="main.js" async></script>
+    <script type="module" src="./Javascript/index.js" async></script>
   </body>
 </html>
