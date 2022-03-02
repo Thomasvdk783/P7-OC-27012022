@@ -1,13 +1,13 @@
 ///// BUTTONS STYLE //////
 
 .section-btn-filter {
-    display:flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 15px;
 
-.dropbtn1 {
-    background-color: #3282F7;
+  .dropbtn1 {
+    background-color: #3282f7;
     color: white;
     border-radius: 5px;
     font-weight: bold;
@@ -16,47 +16,69 @@
     border: none;
     cursor: pointer;
   }
-  
-  .dropbtn1:hover, .dropbtn1:focus {
-    background-color: #3282F7;
+
+  .dropbtn1:hover,
+  .dropbtn1:focus {
+    background-color: #3282f7;
   }
-  
+
   #myInputIngredients {
     background-repeat: no-repeat;
     font-size: 16px;
     padding: 10px;
     border: none;
-    border-bottom: 1px solid #3282F7;
+    border-bottom: 1px solid #3282f7;
     color: #fff;
     font-weight: bold;
-    background-color: #3282F7;
+    background-color: #3282f7;
   }
   #myInputIngredients::placeholder {
     color: #fff;
-    }
-  #myInputIngredients:focus {outline: 3px solid #3282F7;}
-  
+  }
+  #myInputIngredients:focus {
+    outline: 3px solid #3282f7;
+  }
+
   .dropdown {
     position: relative;
     display: inline-block;
-    transform:div;
+    transform: div;
   }
-  
-  .dropdown-content {
-    display: none;
+
+  .show-dropdown-content-ingredients {
+    display: flex;
     flex-wrap: wrap;
     gap: 25px;
     position: absolute;
     font-weight: bold;
     color: #fff;
-    background-color: #3282F7;
-    width: 650px;
+    background-color: #3282f7;
+    width: 598px;
     height: 550px;
-    border: 1px solid #3282F7;
-    border-radius:5px;
+    border: 1px solid #3282f7;
+    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     z-index: 1;
     padding: 10px;
   }
+  /// Dynamique part of btn Ingredient ///
+  .hide-btn-ingredients {
+    display: none;
+  }
+
+  .input-width {
+    width: 550px;
+  }
+
+  .btn-width {
+    width: 620px;
+    padding: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  //// end ////
+
   .dropdown-content a {
     color: #fff;
     font-weight: bold;
@@ -64,22 +86,23 @@
     text-decoration: none;
     display: block;
   }
-  .dropdown-content a:hover {background-color: #3282F7}
-  .show {display:block;}
+  .dropdown-content a:hover {
+    background-color: #3282f7;
+  }
+  .show {
+    display: block;
+  }
 
-  /// Class for javascript 
-  .dropdown-ingredients-width{
+  /// Class for javascript
+  .dropdown-ingredients-width {
     width: 450px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-
-
-
   /// btn appareil ///
   .dropbtn-appareil {
-    background-color: #68D9A4;
+    background-color: #68d9a4;
     color: white;
     border-radius: 5px;
     font-weight: bold;
@@ -88,45 +111,65 @@
     border: none;
     cursor: pointer;
   }
-  
-  .dropbtn-appareil:hover, .dropbtn2:focus {
-    background-color: #68D9A4;
+
+  .dropbtn-appareil:hover,
+  .dropbtn2:focus {
+    background-color: #68d9a4;
   }
   #myInputAppareil {
     background-repeat: no-repeat;
     font-size: 16px;
     padding: 10px;
     border: none;
-    border-bottom: 1px solid #68D9A4;
+    border-bottom: 1px solid #68d9a4;
     color: #fff;
     font-weight: bold;
-    background-color: #68D9A4;
+    background-color: #68d9a4;
   }
   #myInputAppareil::placeholder {
     color: #fff;
-    }
+  }
   #myInputAppareil:focus {
-      outline: 3px solid #68D9A4;
-    }
-  .dropdown-content-appareil {
-    display: none;
+    outline: 3px solid #68d9a4;
+  }
+
+  /// Dynamique part btn appareil ///
+  .show-dropdown-content-appareils {
+    display: flex;
     flex-wrap: wrap;
     gap: 25px;
     position: absolute;
-    background-color: #68D9A4;
-    width: 650px;
+    background-color: #68d9a4;
+    width: 598px;
     height: 550px;
     color: white;
     font-weight: bold;
-    border: 1px solid #68D9A4;
-    border-radius:5px;
+    border: 1px solid #68d9a4;
+    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     z-index: 1;
     padding: 10px;
   }
-  
+
+  .hide-btn-appareils {
+    display: none;
+  }
+
+  .input-width {
+    width: 550px;
+  }
+
+  .btn-width {
+    width: 620px;
+    padding: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  // end //
+
   ////// btn ustensiles /////
   .dropbtn-ustensiles {
-    background-color: #ED6454;
+    background-color: #ed6454;
     color: white;
     border-radius: 5px;
     font-weight: bold;
@@ -135,60 +178,84 @@
     border: none;
     cursor: pointer;
   }
-  
-  .dropbtn-ustensiles:hover, .dropbtn3:focus {
-    background-color: #ED6454;
+
+  .dropbtn-ustensiles:hover,
+  .dropbtn3:focus {
+    background-color: #ed6454;
   }
   #myInputUstensiles {
     background-repeat: no-repeat;
     font-size: 16px;
     padding: 10px;
     border: none;
-    border-bottom: 1px solid #ED6454;
+    border-bottom: 1px solid #ed6454;
     color: #fff;
     font-weight: bold;
-    background-color: #ED6454;
+    background-color: #ed6454;
   }
   #myInputUstensiles::placeholder {
     color: #fff;
-    }
-  #myInputUstensiles:focus {outline: 3px solid #ED6454;}
-  
-  .dropdown-content-ustensiles {
-    display: none;
-    flex-wrap:wrap;
+  }
+  #myInputUstensiles:focus {
+    outline: 3px solid #ed6454;
+  }
+
+  /// Dynamique part btn ustensils ///
+  .show-dropdown-content-ustensiles {
+    display: flex;
+    flex-wrap: wrap;
     gap: 25px;
     position: absolute;
-    background-color: #ED6454;
-    width: 650px;
+    background-color: #ed6454;
+    width: 598px;
     height: 550px;
     color: #fff;
     font-weight: bold;
-    border: 1px solid #ED6454;
-    border-radius:5px;
+    border: 1px solid #ed6454;
+    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     z-index: 1;
     padding: 10px;
   }
+
+  .hide-btn-appareils {
+    display: none;
+  }
+
+  .input-width {
+    width: 550px;
+  }
+
+  .btn-width {
+    width: 620px;
+    padding: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  // end //
 }
 
 ///// Responsive part //////
 @media screen and (max-width: 375px) {
-    .section-btn-filter {
-        max-width: 360px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+  .section-btn-filter {
+    max-width: 360px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-
-.ul-btn-ingredients{
+.ul-btn-ingredients {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  li{
+  li {
     list-style-type: none;
     display: flex;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
   }
+}
+
+.show-content {
+  display: flex;
 }
