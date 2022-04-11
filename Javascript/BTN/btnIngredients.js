@@ -1,8 +1,10 @@
 "use strict";
 
 ////////////////////////////////////////////////////////////////
+import { fetchDataRecipe } from '../fetching.js'
 
 export function dropdownIngredients() {
+  console.log('DATA SA MERE', fetchDataRecipe)
   const btnIngredients = document.getElementById("dropbtn1");
   const dropContentIngredients = document.querySelector(".dropdown-content");
   const iconIngredients = document.querySelector(".fa-chevron-down");

@@ -1,0 +1,53 @@
+// Badge btn filter
+
+#section-result-filter {
+  #container-result-btn-filter {
+    max-width: 1240px;
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top:15px;
+    margin-bottom: 15px;
+  }
+}
+
+.badge-ingredients{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    background-color: #3282f7;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.badge-appareils{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    background-color: #68d9a4;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.badge-ustensiles{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    background-color: #ed6454;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.icon-cross-badge {
+    cursor: pointer;
+}

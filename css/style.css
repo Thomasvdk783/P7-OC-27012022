@@ -64,8 +64,8 @@ main {
   display: inline-block;
   transform: div;
 }
-.section-btn-filter .show-dropdown-content-ingredients {
-  display: flex;
+.section-btn-filter .dropdown-content-ingredients {
+  display: none;
   flex-wrap: wrap;
   gap: 25px;
   position: absolute;
@@ -76,9 +76,30 @@ main {
   height: 550px;
   border: 1px solid #3282f7;
   border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   z-index: 1;
   padding: 10px;
+  overflow: scroll;
+}
+.section-btn-filter .dropdown-content-ingredients::-webkit-scrollbar {
+  width: 10px;
+}
+.section-btn-filter .dropdown-content-ingredients::-webkit-scrollbar-track {
+  background: #3282f7;
+}
+.section-btn-filter .show-content-ingredients {
+  display: flex;
+}
+.section-btn-filter .show-content-ingredients #ul-btn-ingredients {
+  display: flex;
+  display: grid;
+  grid-template-columns: 26% 26% 26%;
+  padding-left: 15px;
+  gap: 50px;
+}
+.section-btn-filter .li-btn-ingredients {
+  list-style-type: none;
+  cursor: pointer;
 }
 .section-btn-filter .hide-btn-ingredients {
   display: none;
@@ -140,8 +161,8 @@ main {
 .section-btn-filter #myInputAppareil:focus {
   outline: 3px solid #68d9a4;
 }
-.section-btn-filter .show-dropdown-content-appareils {
-  display: flex;
+.section-btn-filter .dropdown-content-appareils {
+  display: none;
   flex-wrap: wrap;
   gap: 25px;
   position: absolute;
@@ -152,9 +173,23 @@ main {
   font-weight: bold;
   border: 1px solid #68d9a4;
   border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   z-index: 1;
   padding: 10px;
+  overflow: hidden;
+}
+.section-btn-filter .show-content-appareils {
+  display: flex;
+}
+.section-btn-filter .show-content-appareils #ul-btn-appareils {
+  display: flex;
+  display: grid;
+  grid-template-columns: 70% 70% 70%;
+  padding-left: 15px;
+}
+.section-btn-filter .li-btn-appareils {
+  list-style-type: none;
+  cursor: pointer;
 }
 .section-btn-filter .hide-btn-appareils {
   display: none;
@@ -198,9 +233,8 @@ main {
 .section-btn-filter #myInputUstensiles:focus {
   outline: 3px solid #ed6454;
 }
-.section-btn-filter .show-dropdown-content-ustensiles {
-  display: flex;
-  flex-wrap: wrap;
+.section-btn-filter .dropdown-content-ustensiles {
+  display: none;
   gap: 25px;
   position: absolute;
   background-color: #ed6454;
@@ -210,9 +244,30 @@ main {
   font-weight: bold;
   border: 1px solid #ed6454;
   border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   z-index: 1;
   padding: 10px;
+  overflow: scroll;
+}
+.section-btn-filter .dropdown-content-ustensiles::-webkit-scrollbar {
+  width: 10px;
+}
+.section-btn-filter .dropdown-content-ustensiles::-webkit-scrollbar-track {
+  background: #ed6454;
+}
+.section-btn-filter .show-content-ustensiles {
+  display: flex;
+}
+.section-btn-filter .show-content-ustensiles #ul-btn-ustensiles {
+  display: flex;
+  display: grid;
+  grid-template-columns: 26% 26% 26%;
+  padding-left: 15px;
+  gap: 50px;
+}
+.section-btn-filter .li-btn-ustensiles {
+  list-style-type: none;
+  cursor: pointer;
 }
 .section-btn-filter .hide-btn-appareils {
   display: none;
@@ -246,8 +301,54 @@ main {
   flex-wrap: wrap;
 }
 
-.show-content {
+#section-result-filter #container-result-btn-filter {
+  max-width: 1240px;
+  width: 100%;
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.badge-ingredients {
   display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  background-color: #3282f7;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.badge-appareils {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  background-color: #68d9a4;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.badge-ustensiles {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  background-color: #ed6454;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.icon-cross-badge {
+  cursor: pointer;
 }
 
 .principal-header {

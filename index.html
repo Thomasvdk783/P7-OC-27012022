@@ -44,6 +44,11 @@
           <img src="./medias/loupe.svg" alt="Loup image" />
         </section>
       </section>
+      <!-- Section result btn filter -->
+      <section id="section-result-filter">
+        <div id="container-result-btn-filter">
+        </div>
+      </section>
       <!-- Section BTN filter -->
       <section class="section-btn-filter">
         <div class="dropdown-ingredients">
@@ -52,12 +57,10 @@
               type="text"
               placeholder="Ingredients"
               id="myInputIngredients"
-            /><i class="fas fa-chevron-down"></i>
+            /><i id="icon-ingredients" class="fas fa-chevron-down"></i>
           </button>
-          <div id="myDropdownIngredients" class="dropdown-content">
-            <ul class="ul-btn-ingredients">
-              <!-- Contenu dynamique -->
-            </ul>
+          <div id="myDropdownIngredients" class="dropdown-content-ingredients">
+            <ul id="ul-btn-ingredients"></ul>
           </div>
         </div>
 
@@ -69,9 +72,10 @@
               id="myInputAppareil"
             /><i id="icon-appareils" class="fas fa-chevron-down"></i>
           </button>
-          <div id="myDropdownAppareil" class="dropdown-content-appareil">
+          <div id="myDropdownAppareil" class="dropdown-content-appareils">
             <!-- Contenu dynamique -->
-            <!-- <ul class="ul-btn-Appareils"></ul> -->
+            <ul id="ul-btn-appareils"></ul>
+            
           </div>
         </div>
 
@@ -85,7 +89,7 @@
           </button>
           <div id="myDropdownUstensiles" class="dropdown-content-ustensiles">
             <!-- Contenu dynamique -->
-            <ul class="ul-btn-Ustensiles" id="myDropdownUstensiles"></ul>
+            <ul id="ul-btn-ustensiles"></ul>
           </div>
         </div>
       </section>
@@ -96,6 +100,6 @@
     </main>
 
     <!-- script link -->
-    <script type="module" src="./Javascript/index.js" async></script>
+    <script type="module" src="./JavascriptV2/index.js" async></script>
   </body>
 </html>

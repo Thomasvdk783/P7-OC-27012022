@@ -4,8 +4,13 @@
 
 // Fecthing initialization //
 
-export async function dataRecipes() {
-    const responseJSON = await fetch("../../Data/ApiRecipes.json");
+const fetchDataRecipe = () => {
+  const responseJSON = await fetch("../../Data/ApiRecipes.json");
+  return responseJSON.json();
+}
+
+const dataRecipes = () => {
+  const responseJSON = await fetch("../../Data/ApiRecipes.json");
     const responseJS = await responseJSON.json();
     const recipes = responseJS.recipes;
     let ingredients = [];
@@ -57,6 +62,9 @@ export async function dataRecipes() {
   
       containerRecipes.innerHTML += recipeCard;
     });
-  }
-//   console.log(dataRecipes)
-  dataRecipes();
+}
+
+export {
+  fetchDataRecipe,
+  dataRecipes
+}
