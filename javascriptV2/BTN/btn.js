@@ -71,8 +71,8 @@ export const btn = async (data) => {
   inputIngredients.addEventListener("input", () => {
     const showIngredientsFilter = [];
     const resultSearchIngredients = inputIngredients.value.toLowerCase();
+    ulDropIngredients.innerHTML = "";
     if (resultSearchIngredients.length >= 3) {
-      ulDropIngredients.innerHTML = "";
       sortArrayIngredients.forEach((itemIng) => {
         if (itemIng.includes(resultSearchIngredients)) {
           showIngredientsFilter.push(itemIng);
@@ -111,8 +111,8 @@ export const btn = async (data) => {
         // console.log("Tableau", showArrBadge);
       }
       const el = document.createElement("span")
-      el.innerHTML = ' ';
       showArrBadge.forEach((item) => {
+        el.innerHTML = ' ';
         const badgeIngredient = item.name
         const ingType = item.type
           boxBadges.style.display = "flex";
@@ -172,8 +172,8 @@ export const btn = async (data) => {
   inputAppareils.addEventListener("input", () => {
     const showAppareilsFilter = [];
     const resultSearchAppareils = inputAppareils.value.toLowerCase();
+    ulDropAppareils.innerHTML = "";
     if (resultSearchAppareils.length >= 3) {
-      ulDropAppareils.innerHTML = "";
       sortArrayAppareils.forEach((itemApp) => {
         if (itemApp.includes(resultSearchAppareils)) {
           showAppareilsFilter.push(itemApp);
@@ -184,8 +184,8 @@ export const btn = async (data) => {
       });
     } else {
       sortArrayAppareils.forEach((itemApp) => {
-        const showAppareilsFilter = `<li class="li-btn-ingredients">${itemApp}</li>`;
-        ulDropAppareils.innerHTML += showAppareilsFilter;
+        const AppareilsInBtn  = `<li class="li-btn-ingredients">${itemApp}</li>`;
+        ulDropAppareils.innerHTML += AppareilsInBtn;
       });
     }
   });
@@ -209,8 +209,8 @@ export const btn = async (data) => {
         }
       }
       const el = document.createElement("span")
-      el.innerHTML = ' ';
       showArrBadge.forEach((item) => {
+        el.innerHTML = ' ';
         const badgeAppareils = item.name
         const appType = item.type
         boxBadges.style.display = "flex";
@@ -288,8 +288,8 @@ export const btn = async (data) => {
         }
       }
       const el = document.createElement("span")
-      el.innerHTML = ' ';
       showArrBadge.forEach((item) => {
+        el.innerHTML = ' ';
         const badgeUstensiles = item.name
         const ustType = item.type
         boxBadges.style.display = "flex";
@@ -301,6 +301,7 @@ export const btn = async (data) => {
         console.log('clique ok')
         boxBadges.removeChild(el)
       })
+      console.log(showArrBadge)
       btnSearchData(showArrBadge)
       
       // const badgeUstensiles = `<span class="badge-ustensiles">${itemUstBtn.textContent}<img class="icon-cross-badge" src="../medias/cross.svg" alt=""></span>`;

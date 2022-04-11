@@ -4,39 +4,57 @@ import { showRecipes } from "./showRecipes.js";
 
 export const btnSearchData = async (showArrBadge) => {
   // Tu récupères le Json
-  console.log(showArrBadge)
+  console.log(showArrBadge);
   const data = await fetchDataRecipe();
   const result = data.recipes;
   let showGoodCard = [];
 
   // Tu vérifies le nombre de caractère que l'utilisateur à entrer
-  if(showArrBadge.length === 0) {
+  if (showArrBadge.length === 0) {
     showGoodCard = result;
-  }else{
-      showArrBadge.forEach((item) => {
-        
+  } else {
+    showArrBadge.forEach((item, index) => {
+      console.log(showGoodCard);
+      if (index === 0) {
         result.forEach((recipe) => {
-            const ingredients = recipe.ingredients;
-            ingredients.forEach((ing) => {
-                if (ing.ingredient.toLowerCase().includes(item.name) === true) {
-                  showGoodCard.push(recipe); //
-                }
-              })
-            const appareils = recipe.appliance
-            if(appareils.toLowerCase().includes(item.name) === true){
+          const ingredients = recipe.ingredients;
+          ingredients.forEach((ing) => {
+            if (ing.ingredient.toLowerCase().includes(item.name) === true) {
+              showGoodCard.push(recipe); //
+            }
+          });
+          const appareils = recipe.appliance;
+          if (appareils.toLowerCase().includes(item.name) === true) {
+            showGoodCard.push(recipe);
+          }
+          const ustensiles = recipe.ustensils;
+          ustensiles.forEach((ust) => {
+            if (ust.toLowerCase().includes(item.name) === true) {
               showGoodCard.push(recipe);
             }
-            const ustensiles = recipe.ustensils    
-            ustensiles.forEach((ust) => {
-            if(ust.toLowerCase().includes(item.name) === true){
-              showGoodCard.push(recipe);
+          });
+        });
+      }else{
+        showGoodCard.forEach((recipe) => {
+          const ingredients = recipe.ingredients;
+          ingredients.forEach((ing) => {
+            if (!ing.ingredient.toLowerCase().includes(item.name) === true) {
+              showGoodCard.slice(index, 1); //
             }
-          })
-        })  
-      })
+          });
+          const appareils = recipe.appliance;
+          if (appareils.toLowerCase().includes(item.name) === true) {
+            showGoodCard.slice(index, 1);
+          }
+          const ustensiles = recipe.ustensils;
+          ustensiles.forEach((ust) => {
+            if (ust.toLowerCase().includes(item.name) === true) {
+              showGoodCard.slice(index, 1);
+            }
+          });
+        });
+      }
+    });
   }
   showRecipes(showGoodCard);
-
 };
-
-

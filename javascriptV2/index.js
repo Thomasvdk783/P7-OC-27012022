@@ -1,6 +1,5 @@
 import {initData} from '../javascriptV2/initData.js';
-// import {userSearchData} from '../javascriptV2/userSearchData.js';
-import {userSearchData} from '../javascriptV2/Searchwithfor.js'
+import {userSearchData} from '../javascriptV2/userSearchData.js';
 
 
 
