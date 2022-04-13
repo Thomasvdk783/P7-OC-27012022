@@ -6,26 +6,21 @@ export const showRecipes = async (data) => {
   const showRecipesContainer = document.getElementById("list-recipes");
   showRecipesContainer.innerHTML = '';
   const recipes = data;
+  let showIngredients = [];
 
-  recipes.forEach((item) => {
-    const ingredients = item.ingredients;    
-    
 
-    item.ingredients.forEach((ing) => {
-      // console.log(ing.length);
+  for (const item of recipes ) {
+    const ingredients = item.ingredients;
+    // console.log(ingredients)
+    for (const ing of ingredients ) {
+      // console.log(ing)
+      const ingredient = ing.ingredient
+      const quantity = ing.quantity
+      const unit = ing.unit
+      showIngredients += `<li>${ingredient} : ${quantity} ${unit}</li>`
+    }
 
-    })
 
-    let showIngredients
-
-    ingredients.forEach((ing) =>{
-        const ingredient = ing.ingredient
-        const quantity = ing.quantity
-        const unit = ing.unit
-        showIngredients += `<li>${ingredient} : ${quantity} ${unit}</li>`
-    })
-    
-    
     const cardRecipe = `<section class="card-recipe">
     <figure>
       <img src="medias/food.jpg" alt="" />
@@ -48,5 +43,8 @@ export const showRecipes = async (data) => {
   </section>`;
 
     showRecipesContainer.innerHTML += cardRecipe
-  });
+    
+
+  
+  }
 };

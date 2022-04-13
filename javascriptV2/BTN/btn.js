@@ -25,31 +25,33 @@ export const btn = async (data) => {
     const ustensiles = item.ustensils;
     const appareils = item.appliance;
 
-    arrIngredients.forEach((ing) => {
+    // Remplie les ingredients
+    for (const ing of arrIngredients){
       if (!sortArrayIngredients.includes(ing.ingredient.toLowerCase())) {
         sortArrayIngredients.push(ing.ingredient.toLowerCase());
       }
-    });
+    }
+    
 
-    // Remplie les appareil
+    // Remplie les appareils
     if (!sortArrayAppareils.includes(item.appliance.toLowerCase())) {
       sortArrayAppareils.push(item.appliance.toLowerCase());
     }
 
     // Remplie les ustensiles
-    ustensiles.forEach((ust) => {
+    for (const ust of ustensiles){
       if (!sortArrayUstensiles.includes(ust.toLowerCase())) {
         sortArrayUstensiles.push(ust.toLowerCase());
       }
-    });
+    }
   });
   // Affichage de la data dans les boutons
   //Mise en place des Ingrédients
   const ulDropIngredients = document.getElementById("ul-btn-ingredients");
-  sortArrayIngredients.forEach((itemIng) => {
+  for (const itemIng of sortArrayIngredients){
     const showIngredientsInBtn = `<li class="li-btn-ingredients">${itemIng}</li>`;
     ulDropIngredients.innerHTML += showIngredientsInBtn;
-  });
+  }
   
   // Init btn ingredients
   const dropContentIngredients = document.querySelector(
@@ -73,25 +75,25 @@ export const btn = async (data) => {
     const resultSearchIngredients = inputIngredients.value.toLowerCase();
     if (resultSearchIngredients.length >= 3) {
       ulDropIngredients.innerHTML = "";
-      sortArrayIngredients.forEach((itemIng) => {
+      for (const itemIng of sortArrayIngredients){
         if (itemIng.includes(resultSearchIngredients)) {
           showIngredientsFilter.push(itemIng);
         }
-      });
-      showIngredientsFilter.forEach((itemIng) => {
+      }
+      for (const itemIng of showIngredientsFilter){
         ulDropIngredients.innerHTML += `<li class="li-btn-ingredients">${itemIng}</li>`;
-      });
+      }
     } else {
-      sortArrayIngredients.forEach((itemIng) => {
+      for (const itemIng of sortArrayIngredients){
         const showIngredientsInBtn = `<li class="li-btn-ingredients">${itemIng}</li>`;
         ulDropIngredients.innerHTML += showIngredientsInBtn;
-      });
+      }
     }
   });
 
   // Eventlistener quand il appuit sur un ingredient
   const clicIngredient = document.querySelectorAll(".li-btn-ingredients");
-  clicIngredient.forEach((itemIngBtn) => {
+  for (const itemIngBtn of clicIngredient){
     itemIngBtn.addEventListener("click", function () {
       if (!showArrBadge.length > 0) {
         showArrBadge.push({
@@ -112,15 +114,14 @@ export const btn = async (data) => {
       }
       const el = document.createElement("span")
       el.innerHTML = ' ';
-      showArrBadge.forEach((item) => {
+      for (const item of showArrBadge) {
         const badgeIngredient = item.name
         const ingType = item.type
           boxBadges.style.display = "flex";
           el.innerHTML = `${badgeIngredient}<img class="icon-cross-badge" src="../medias/cross.svg" alt="">`
           el.classList.add(`badge-${ingType}`)
           boxBadges.appendChild(el) 
-          
-        })
+      }
         el.addEventListener("click", () => {
             console.log('clique ok')
             boxBadges.removeChild(el)
@@ -129,29 +130,17 @@ export const btn = async (data) => {
         
         btnSearchData(showArrBadge)
  
-        
-
-
-
-      // ----------------------------------------------------
-      // Parcourir le tableau ShowArrBadge
-      // Afficher les badges sur le site 
-          // Ex: `<li class="li-btn-${TYPE}">${NAME}</li>`
-
-      // Faire pareil pour Appareil et Ustensiles
-      // -----------------------------------------------------
-
     });
-  });
+  }
 
   // Init btn Appareils
 
   // Mise en place des appareils
   const ulDropAppareils = document.getElementById("ul-btn-appareils");
-  sortArrayAppareils.forEach((itemApp) => {
+  for (const itemApp of sortArrayAppareils) {
     const showAppareilsInBtn = `<li class="li-btn-appareils">${itemApp}</li>`;
     ulDropAppareils.innerHTML += showAppareilsInBtn;
-  });
+  }
 
   const dropContentAppareils = document.querySelector(
     ".dropdown-content-appareils"
@@ -174,25 +163,26 @@ export const btn = async (data) => {
     const resultSearchAppareils = inputAppareils.value.toLowerCase();
     if (resultSearchAppareils.length >= 3) {
       ulDropAppareils.innerHTML = "";
-      sortArrayAppareils.forEach((itemApp) => {
+      for (const itemApp of sortArrayAppareils) {
         if (itemApp.includes(resultSearchAppareils)) {
           showAppareilsFilter.push(itemApp);
         }
-      });
-      showAppareilsFilter.forEach((itemApp) => {
+      }
+      for (const itemApp of showAppareilsFilter) {
         ulDropAppareils.innerHTML += `<li class="li-btn-ingredients">${itemApp}</li>`;
-      });
+      }
+      
     } else {
-      sortArrayAppareils.forEach((itemApp) => {
+      for (const itemApp of sortArrayAppareils) {
         const showAppareilsFilter = `<li class="li-btn-ingredients">${itemApp}</li>`;
         ulDropAppareils.innerHTML += showAppareilsFilter;
-      });
+      }
     }
   });
 
   // Eventlistener quand il appuit sur un Appareil
   const clicAppareils = document.querySelectorAll(".li-btn-appareils");
-  clicAppareils.forEach((itemAppBtn) => {
+  for (const itemAppBtn of clicAppareils) {
     itemAppBtn.addEventListener("click", function () {
       if(!showArrBadge.length > 0) {
         showArrBadge.push({
@@ -210,14 +200,14 @@ export const btn = async (data) => {
       }
       const el = document.createElement("span")
       el.innerHTML = ' ';
-      showArrBadge.forEach((item) => {
+      for (const item of showArrBadge) {
         const badgeAppareils = item.name
         const appType = item.type
         boxBadges.style.display = "flex";
         el.innerHTML = `${badgeAppareils}<img class="icon-cross-badge" src="../medias/cross.svg" alt="">`
         el.classList.add(`badge-${appType}`)
         boxBadges.appendChild(el)
-      })
+      }
       el.addEventListener("click", () => {
         console.log('clique ok')
         boxBadges.removeChild(el)
@@ -225,15 +215,16 @@ export const btn = async (data) => {
       })
       btnSearchData(showArrBadge)
     });
-  });
+  }
+
 
   //BTN Ustensiles
   // Mise en place des ustensiles
   const ulDropUstensiles = document.getElementById("ul-btn-ustensiles");
-  sortArrayUstensiles.forEach((itemUst) => {
+  for (const itemUst of sortArrayUstensiles) {
     const showUstensilesInBtn = `<li class="li-btn-ustensiles">${itemUst}</li>`;
     ulDropUstensiles.innerHTML += showUstensilesInBtn;
-  });
+  }
 
   const btnUstensiles = document.getElementById("btn-ustensils");
   const dropContentUstensiles = document.getElementById("myDropdownUstensiles");
@@ -253,25 +244,25 @@ export const btn = async (data) => {
     const resultSearchUstensiles = inputUstensiles.value.toLowerCase();
     if (resultSearchUstensiles.length >= 3) {
       ulDropUstensiles.innerHTML = "";
-      sortArrayUstensiles.forEach((itemUst) => {
+      for (const itemUst of sortArrayUstensiles){
         if (itemUst.includes(resultSearchUstensiles)) {
           showUstensilesFilter.push(itemUst);
         }
-      });
-      showUstensilesFilter.forEach((itemUst) => {
+      }
+      for (const itemUst of showUstensilesFilter) {
         ulDropUstensiles.innerHTML += `<li class="li-btn-ingredients">${itemUst}</li>`;
-      });
+      }
     } else {
-      sortArrayUstensiles.forEach((itemUst) => {
+      for (const itemUst of sortArrayUstensiles) {
         const showUstensilesFilter = `<li class="li-btn-ingredients">${itemUst}</li>`;
         ulDropUstensiles.innerHTML += showUstensilesFilter;
-      });
+      }
     }
   });
 
   // Eventlistener quand il appuit sur un Ustensiles
   const clicUstensiles = document.querySelectorAll(".li-btn-ustensiles");
-  clicUstensiles.forEach((itemUstBtn) => {
+  for (const itemUstBtn of clicUstensiles) {
     itemUstBtn.addEventListener("click", function () {
       if(!showArrBadge.lenght > 0) {
         showArrBadge.push({
@@ -289,37 +280,33 @@ export const btn = async (data) => {
       }
       const el = document.createElement("span")
       el.innerHTML = ' ';
-      showArrBadge.forEach((item) => {
+      for (const item of showArrBadge) {
         const badgeUstensiles = item.name
         const ustType = item.type
         boxBadges.style.display = "flex";
         el.innerHTML = `${badgeUstensiles}<img class="icon-cross-badge" src="../medias/cross.svg" alt="">`
         el.classList.add(`badge-${ustType}`)
         boxBadges.appendChild(el)
-      })
+      }
+
       el.addEventListener("click", () => {
         console.log('clique ok')
         boxBadges.removeChild(el)
       })
       btnSearchData(showArrBadge)
-      
-      // const badgeUstensiles = `<span class="badge-ustensiles">${itemUstBtn.textContent}<img class="icon-cross-badge" src="../medias/cross.svg" alt=""></span>`;
-      // console.log(badgeUstensiles);
-      // boxBadges.style.display = "flex";
-      // showArrBadgeUstensiles.push(badgeUstensiles);
-      // boxBadgesArr.push(showArrBadgeUstensiles);
-      // boxBadges.innerHTML = boxBadgesArr;
     });
-  });
+  }
+
+
 
   function removeBadgeFilter() {
     const crossBadges = document.querySelector(".icon-cross-badge");
     console.log(crossBadges);
-    boxBadgesArr.forEach((itemBadge) => {
+    for (const itemBadge of boxBadgesArr) {
       itemBadge.addEventListener("click", () => {
         boxBadgesArr.slice(itemBadge);
       });
-    });
+    }
   }
   removeBadgeFilter();
 };
