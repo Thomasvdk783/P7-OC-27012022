@@ -6,12 +6,13 @@ export const showRecipes = async (data) => {
   const showRecipesContainer = document.getElementById("list-recipes");
   showRecipesContainer.innerHTML = '';
   const recipes = data;
-  let showIngredients = [];
+  
 
 
   for (const item of recipes ) {
     const ingredients = item.ingredients;
     // console.log(ingredients)
+    let showIngredients
     for (const ing of ingredients ) {
       // console.log(ing)
       const ingredient = ing.ingredient
@@ -19,7 +20,7 @@ export const showRecipes = async (data) => {
       const unit = ing.unit
       showIngredients += `<li>${ingredient} : ${quantity} ${unit}</li>`
     }
-
+    
 
     const cardRecipe = `<section class="card-recipe">
     <figure>
