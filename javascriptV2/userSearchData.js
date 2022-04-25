@@ -1,6 +1,7 @@
 // Cette page va être appeler quand l'utilisateur va écrire dans la barre de recherche.
 import { fetchDataRecipe } from "./fetchDataRecipe.js";
 import { showRecipes } from "./showRecipes.js";
+import { fullBtn } from "./BTN/fullBtn.js"
 
 export const userSearchData = async () => {
   const searchBar = document.getElementById("searchbar");
@@ -38,5 +39,7 @@ export const userSearchData = async () => {
     // Si l'utilisateur à écrit moins de 3 caractére, tu fais rien
     showGoodCard = result;
   }
+  console.log('showGoodCard', showGoodCard)
   showRecipes(showGoodCard);
+  fullBtn(showGoodCard)
 };

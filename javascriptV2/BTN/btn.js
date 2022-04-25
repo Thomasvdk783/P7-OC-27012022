@@ -1,5 +1,6 @@
 
 import {btnSearchData} from "../btnSearchData.js" 
+import { fullBtn } from "./fullBtn.js"
 
 // BTN ingredients
 
@@ -7,9 +8,9 @@ import {btnSearchData} from "../btnSearchData.js"
 
 export const btn = async (data) => {
   const recipes = data;
-  const sortArrayIngredients = [];
-  const sortArrayUstensiles = [];
-  const sortArrayAppareils = [];
+  let sortArrayIngredients = [];
+  let sortArrayUstensiles = [];
+  let sortArrayAppareils = [];
   const showCardResult = [];
 
   // Init constantes Badge
@@ -19,37 +20,16 @@ export const btn = async (data) => {
   const showArrBadgeUstensiles = [];
   const boxBadgesArr = [];
   const showArrBadge = [];
+  
 
-  recipes.forEach((item) => {
-    const arrIngredients = item.ingredients;
-    const ustensiles = item.ustensils;
-    const appareils = item.appliance;
+  const response = await fullBtn(recipes)
+  console.log(response)
+  sortArrayIngredients = response.sortArrayIngredients
+  sortArrayUstensiles = response.sortArrayUstensiles
+  sortArrayAppareils = response.sortArrayAppareils
 
-    arrIngredients.forEach((ing) => {
-      if (!sortArrayIngredients.includes(ing.ingredient.toLowerCase())) {
-        sortArrayIngredients.push(ing.ingredient.toLowerCase());
-      }
-    });
 
-    // Remplie les appareil
-    if (!sortArrayAppareils.includes(item.appliance.toLowerCase())) {
-      sortArrayAppareils.push(item.appliance.toLowerCase());
-    }
-
-    // Remplie les ustensiles
-    ustensiles.forEach((ust) => {
-      if (!sortArrayUstensiles.includes(ust.toLowerCase())) {
-        sortArrayUstensiles.push(ust.toLowerCase());
-      }
-    });
-  });
-  // Affichage de la data dans les boutons
-  //Mise en place des Ingrédients
-  const ulDropIngredients = document.getElementById("ul-btn-ingredients");
-  sortArrayIngredients.forEach((itemIng) => {
-    const showIngredientsInBtn = `<li class="li-btn-ingredients">${itemIng}</li>`;
-    ulDropIngredients.innerHTML += showIngredientsInBtn;
-  });
+  
   
   // Init btn ingredients
   const dropContentIngredients = document.querySelector(
@@ -93,41 +73,18 @@ export const btn = async (data) => {
   const clicIngredient = document.querySelectorAll(".li-btn-ingredients");
   clicIngredient.forEach((itemIngBtn) => {
     itemIngBtn.addEventListener("click", function () {
-      if (!showArrBadge.length > 0) {
-        showArrBadge.push({
-          name: itemIngBtn.textContent,
-          type: "ingredients",
-        });
-      } else {
-        // On cherche si il y a un doublon.
-        const result = showArrBadge.find(item => item.name === itemIngBtn.textContent)
-        // Si pas de doublon, result est undefined, donc faux.
-        if(!result) {
-          showArrBadge.push({
-            name: itemIngBtn.textContent,
-            type: "ingredients",
-          });
-        }
-        // console.log("Tableau", showArrBadge);
-      }
-      const el = document.createElement("span")
-      showArrBadge.forEach((item) => {
-        el.innerHTML = ' ';
-        const badgeIngredient = item.name
-        const ingType = item.type
-          boxBadges.style.display = "flex";
-          el.innerHTML = `${badgeIngredient}<img class="icon-cross-badge" src="../medias/cross.svg" alt="">`
-          el.classList.add(`badge-${ingType}`)
-          boxBadges.appendChild(el) 
-          
-        })
-        el.addEventListener("click", () => {
-            console.log('clique ok')
-            boxBadges.removeChild(el)
+      // Fonction qui sert à remplir le tableau des badges
+      fullArrayBadge(itemIngBtn)
+      // Fonction qui sert à afficher les badges
+      showBadgeList(showArrBadge)
 
-          })
+      console.log('Apres la boucle', showArrBadge)
+      
+        // el.addEventListener("click", () => {
+        //     boxBadges.removeChild(el)
+        // })
         
-        btnSearchData(showArrBadge)
+        // btnSearchData(showArrBadge)
  
         
 
@@ -143,6 +100,52 @@ export const btn = async (data) => {
 
     });
   });
+
+  // Fonction qui sert à remplir le tableau des badges
+  const fullArrayBadge = (itemIngBtn) => {
+    if (!showArrBadge.length > 0) {
+      showArrBadge.push({
+        name: itemIngBtn.textContent,
+        type: "ingredients",
+      });
+    } else {
+      // On cherche si il y a un doublon.
+      const result = showArrBadge.find(item => {
+        console.log('dsqds', item.name, itemIngBtn.textContent)
+        return item.name === itemIngBtn.textContent
+      } )
+      console.log('result', result);
+      // Si pas de doublon, result est undefined, donc faux.
+      if(result === undefined) {
+        console.log('JE SUIS PAS UN DOUBLON', itemIngBtn.textContent)
+        showArrBadge.push({
+          name: itemIngBtn.textContent,
+          type: "ingredients",
+        });
+      } else {
+        console.log('JE SUIS UN DOUBLON')
+      }
+    }
+
+    console.log('showArrBadge', showArrBadge)
+  }
+
+  // Fonction qui sert à afficher les badges
+  const showBadgeList = (resultArrayBadge) => {
+    const el = document.createElement("span")
+    el.innerHTML = ' ';
+    console.log('resultArrayBadge', resultArrayBadge)
+    resultArrayBadge.forEach((item) => {
+      console.log('ITEMMMM', item)
+      const badgeIngredient = item.name
+      const ingType = item.type
+        boxBadges.style.display = "flex";
+        el.innerHTML = `${badgeIngredient}<img class="icon-cross-badge" src="../medias/cross.svg" alt="">`
+        el.classList.add(`badge-${ingType}`)
+        
+      })
+      boxBadges.appendChild(el) 
+  }
 
   // Init btn Appareils
 
